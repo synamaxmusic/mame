@@ -917,11 +917,11 @@ void atarisy1_state::reliefs1(machine_config &config)
 	m_maincpu->set_addrmap(AS_PROGRAM, &atarisy1_state::main_map_noslapstic);
 
 	// Hall-effect analog joysticks
-	m_adc->in_callback<4>().set_ioport("IN2"); // not having this mapped shows more service mode tests 
-	m_adc->in_callback<5>().set_ioport("IN3"); // but is correct according to the joystick test?
+	m_adc->in_callback<4>().set_ioport("IN0");
+	m_adc->in_callback<5>().set_ioport("IN1");
 
-	m_adc->in_callback<6>().set_ioport("IN0");
-	m_adc->in_callback<7>().set_ioport("IN1");
+	m_adc->in_callback<6>().set_ioport("IN2");
+	m_adc->in_callback<7>().set_ioport("IN3");
 }
 
 
